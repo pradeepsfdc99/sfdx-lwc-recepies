@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Shopping Cart" icon-name="standard:icon">
+        <div class="slds-m-around_large">
+                <lightning-record-edit-form 
+                object-api-name="Shopping_Cart__c">
+
+            <lightning-input label="Id" disabled value={id}></lightning-input>
+            <lightning-input-field  field-name={name}  aria-label="Name"></lightning-input-field> 
+            <lightning-input-field field-name={ScDescription}  aria-label="Description"></lightning-input-field>
+            <lightning-input-field field-name="ScPrice__c"></lightning-input-field>
+            <lightning-input-field field-name="ScImage__c"></lightning-input-field>
+            <lightning-input-field field-name="ScDiscount__c"></lightning-input-field>
+            <lightning-button type="submit" label="Update record" onclick={createShoppingCard} class="slds-m-top_medium">
+            </lightning-button>
+            </lightning-record-edit-form>
+
+        </div>
+    </lightning-card>
+</template>
